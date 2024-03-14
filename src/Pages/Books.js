@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box, Stack, Typography } from '@mui/material';
 
 import { fetchData } from '../utils/fetchData';
 import BookCard from '../components/BookCard';
@@ -31,14 +31,15 @@ const Books = () => {
             </Typography>
 
             <SeachBooks setSearchedBooks={setSearchedBooks} books={books} setBooks={setBooks} />
-
-            {searchedBooks.length > 0 ? (
-            searchedBooks.map((book) => (
-                <BookCard key={book._id} book={book} />
-            ))
-            ) : (
-                <Typography variant="body1">Loading...</Typography>
-            )}
+            <Stack direction="row" flexWrap="wrap" justifyContent="center" alignItems="center" sx={{ gap: { lg: '110px', xs: '50px' }}}>
+                {searchedBooks.length > 0 ? (
+                searchedBooks.map((book) => (
+                    <BookCard key={book._id} book={book} />
+                ))
+                ) : (
+                    <Typography variant="body1">Loading...</Typography>
+                )}
+            </Stack>
         </Box>
     )
 }

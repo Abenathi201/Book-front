@@ -5,6 +5,7 @@ import { Box } from '@mui/material';
 import "./App.css";
 import Home from './Pages/Home';
 import Books from './Pages/Books';
+import BookDetail from './Pages/BookDetail';
 import Contact from './Pages/Contact';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer';
@@ -16,6 +17,7 @@ const App = () => {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/books" element={<Books />} />
+                <Route path="/books/:bookId" element={<BookDetail />} />
                 <Route path="/contact" element={<Contact />} />
             </Routes>
             <Footer />

@@ -1,16 +1,30 @@
 import React from 'react';
-import { Card, CardContent, Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
+import { CardContent, Typography } from '@mui/material';
 
 const BookCard = ({ book }) => {
     return (
-        <Card>
+        <div className="book-card">
             <CardContent>
-                <Typography variant="h6">{book.title}</Typography>
-                <img src={book.image} alt={book.title} width={60} />
-                <Typography variant="subtitle1">Author: {book.author}</Typography>
-                {/* Add other book details as needed */}
+                <div className="book-card_cover">
+                    <div className="book-card_book">
+                        <Link className="book-card_book-front" to={`/books/${book._id}`}>
+                            <img className="book-card_img" src={book.image} alt={book.title} />
+                        </Link>
+                        <div className="book-card_book-back"></div>
+                        <div className="book-card_book-side"></div>
+                    </div>
+                </div>
+                <div>
+                    <Typography variant="h6" className="book-card_title">
+                        {book.title}
+                    </Typography>
+                    <Typography variant="subtitle1" className="book-card_author">
+                        Author: {book.author}
+                    </Typography>
+                </div>
             </CardContent>
-        </Card>
+        </div>
     );
 };
 
