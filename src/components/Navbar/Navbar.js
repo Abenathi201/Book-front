@@ -3,12 +3,12 @@ import { Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 import "./Navbar.css";
-import Logo from '../../assets/images/Logo.png';
+// import Logo from '../../assets/images/Logo.png';
 
 const Navbar = () => {
     const [isSticky, setIsSticky] = useState(false);
     const [isNavigationActive, setIsNavigationActive] = useState(false);
-    const [activeLink, setActiveLink] = useState('home');
+    const [activeLink, setActiveLink] = useState('');
 
     const handleScroll = () => {
         setIsSticky(window.scrollY > 0);

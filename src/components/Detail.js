@@ -4,7 +4,7 @@ import { Button, Typography, Stack } from '@mui/material';
 import Description from './Description';
 
 const Detail = ({ singleBook }) => {
-    const { title, image, author, summary, categories } = singleBook;
+    const { title, image, author, summary, amount, categories } = singleBook;
 
     return (
         <Stack gap="60px" sx={{ flexDirection: { lg: 'column' }, p: '20px', alignItems:'center' }}>
@@ -18,7 +18,7 @@ const Detail = ({ singleBook }) => {
 
                     <Stack>
                         <Typography variant="h4">
-                            R 65
+                            R {amount}
                         </Typography>
 
                         <Button>
