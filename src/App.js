@@ -3,12 +3,13 @@ import { Route, Routes } from 'react-router-dom';
 import { Box } from '@mui/material';
 
 import "./App.css";
+import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer';
 import Home from './Pages/Home';
 import Books from './Pages/Books';
 import BookDetail from './Pages/BookDetail';
-import Contact from './Pages/Contact';
-import Navbar from './components/Navbar/Navbar';
-import Footer from './components/Footer';
+import Login from './Pages/Login';
+import Profile from './Pages/Profile';
 
 const App = () => {
     return (
@@ -18,7 +19,8 @@ const App = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/books" element={<Books />} />
                 <Route path="/books/:bookId" element={<BookDetail />} />
-                <Route path="/contact" element={<Contact />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/profile/:userId" element={<Profile />} />
             </Routes>
             <Footer />
         </Box>

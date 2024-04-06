@@ -31,6 +31,7 @@ const Books = () => {
             </Typography>
 
             <SeachBooks setSearchedBooks={setSearchedBooks} books={books} setBooks={setBooks} />
+            
             <Stack direction="row" flexWrap="wrap" justifyContent="center" alignItems="center" sx={{ gap: { lg: '110px', xs: '50px' }}}>
                 {searchedBooks.length > 0 ? (
                 searchedBooks.map((book) => (

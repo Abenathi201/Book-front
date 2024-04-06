@@ -37,6 +37,16 @@ header.sticky {
     text-decoration: none;
 }
 
+/* .btn-login {
+    background-color: #000000 !important;
+    color: #FFFFFF  !important;
+    border: none;
+    border-radius: 5px !important;
+    height: 50px !important;
+    width: 50px !important;
+    padding: auto;
+} */
+
 .nav-bar .logo {
     font-family: 'Leckerli One';
     color: #000000;

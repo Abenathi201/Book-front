@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
 body {
-    font-family: 'Josefin Sans';
+    font-family: "Nunito Sans", sans-serif;
     background-color: #FFFAFB;
 }
 
@@ -9,31 +11,92 @@ body {
     box-sizing: border-box;
 }
 
-.right-arrow,
-.left-arrow {
-    cursor: pointer;
-    background: transparent;
-    outline: none;
-    border: none;
+.hero_banner {
+    width: 1440px;
+    height: 657px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    font-size: 25px;
-    border-radius: 4px;
-    position: absolute;
-    bottom: -20px;
-    right: 80px;
-    transform: scale(1);
-    transition: 0.3s all ease-in-out;
+    /* gap: 30px; */
+}
+
+.right_arrow,
+.left_arrow {
+    width: 50px;
+    height: 50px;
+    transition: 0.3s all;
+    cursor: pointer;
 }
 
 .right-arrow {
     right: 140px;
 }
 
-.right-arrow:hover,
-.left-arrow:hover {
+.right_arrow:hover,
+.left_arrow:hover {
     transform: scale(1.3, 1.3);
+}
+
+.banner_btn {
+    width: 170px;
+    height: 61px;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: transparent;
+    border: 1px solid #000000;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    gap: 30px;
+}
+
+.vector {
+    width: 20px;
+    height: 17px;
+}
+
+.active-circle {
+    border: 2px solid #000000;
+    border-radius: 50%;
+    padding: 5px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+  
+.hero {
+  transition: 0.5s ease;
+}
+
+.hero_img {
+    width: 500px;
+    height: 550px;
+    transition: opacity 0.5s ease;
+}
+
+.hr_line {
+    height: 32px;
+    width: 2px;
+    border: none;
+    background-color: #000000;
+    transform: rotate(90deg);
+}
+
+.categories_arrows {
+    cursor: pointer;
+}
+
+.category_slider {
+    display: flex;
+    overflow-x: hidden;
+    transition: transform 0.5s ease;
+}
+
+.category_image {
+    flex: 0 0 auto;
+    margin-right: 8px;
 }
 
 .react-horizontal-scrolling-menu--wrapper {
@@ -166,3 +229,71 @@ body {
     font-size: 0.875rem;
 }
 /* TABS */
+
+.google-btn{
+    background-color: #FFF;
+    color: #000000;
+    border: 1px solid #E8E8E8;
+    width: 450px;
+    height: 50px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.submit-btn {
+    background-color: #000000;
+    color: #FFF;
+    border: none;
+    width: 450px;
+    height: 50px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.welcome {
+    width: 6px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: #000000;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.input-btn{
+    padding: 0px;
+    width: 40px;
+    height: 36px;
+    margin: 0px;
+    background-color: rgb(255, 255, 255);
+    border-width: 1px 0px;
+    border-top-style: solid;
+    border-top-color: rgb(227, 227, 228);
+    border-bottom-style: solid;
+    border-bottom-color: rgb(227, 227, 228);
+    font-size: 14px;
+}
+
+.cart-btn {
+    width: 40px;
+    height: 36px;
+    margin: 0px;
+    background: rgb(246, 246, 246);
+    border: 1px solid rgb(227, 227, 228);
+    cursor: pointer;
+    padding: 0px;
+    transition: ease 0.3s;
+}
+
+.cart-btn:hover {
+    background: rgb(190, 190, 190);
+}

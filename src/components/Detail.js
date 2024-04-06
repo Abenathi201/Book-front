@@ -2,9 +2,30 @@ import React from 'react';
 import { Button, Typography, Stack } from '@mui/material';
 
 import Description from './Description';
+import { fetchData } from '../utils/fetchData';
 
-const Detail = ({ singleBook }) => {
-    const { title, image, author, summary, amount, categories } = singleBook;
+const Detail = ({ singleBook, userId }) => {
+    const { _id, title, image, author, summary, amount, categories } = singleBook;
+
+    const handleAddToCart = async () => {
+        try {
+            const response = await fetchData(`/cart/${userId}/addCartItem`, {
+                method: 'POST',
+                headers: {  'Content-Type': 'application/json'  },
+                body: JSON.stringify({
+                    bookId: _id,
+                    quantity: 1
+                })
+            });
+    
+            if (response.status === 200) {
+                alert('Item added')
+            }
+        } catch (error) {
+            console.error('Error adding item to the cart:', error);
+        }
+    };
+    
 
     return (
         <Stack gap="60px" sx={{ flexDirection: { lg: 'column' }, p: '20px', alignItems:'center' }}>
@@ -21,7 +42,7 @@ const Detail = ({ singleBook }) => {
                             R {amount}
                         </Typography>
 
-                        <Button>
+                        <Button onClick={handleAddToCart}>
                             Add to Cart
                         </Button>
                     </Stack>                
